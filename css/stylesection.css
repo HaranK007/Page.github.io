@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+section{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.container{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.gallery{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-box{
+    width: 100px;
+    height: 500px;
+    margin: 10px;
+    border-radius: 50px;
+    background: linear-gradient(rgba(85, 85, 206, 0.632),rgba(0,0,50,0.8)),url(/img/imgbox/one.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: width 0.5s;
+}
+
+.img-box:nth-child(2){
+    background-size:cover ;
+    background: linear-gradient(rgba(85, 85, 206, 0.632),rgba(0,0,50,0.8)), url(/img/imgbox/two2.jpeg);
+    background-position: center;
+}
+.img-box:nth-child(3){
+    background-size:cover ;
+    background: linear-gradient(rgba(85, 85, 206, 0.632),rgba(0,0,50,0.8)),url(/img/imgbox/three2.jpg);
+    background-position: center;
+}
+.img-box:nth-child(4){
+    background-size:cover ;
+    background: linear-gradient(rgba(85, 85, 206, 0.632),rgba(0,0,50,0.8)),url(/img/imgbox/four.jpg);
+    width: 300px;
+    background-position: center;
+}
+
+.img-box h3{
+    position: absolute;
+
+    left: 30px;
+    opacity: 0;   
+}
+
+.img-box:nth-child(4) h3{
+    opacity: 1;  
+    bottom: 25px; 
+}
+
+.img-box h3 a{
+    text-decoration: none;
+    color: #fff;
+    transition: bottom 0.5, opacity .5s;
+}
+
+
+.img-box:hover{
+    width: 300px;
+    cursor: pointer;
+}
+
+.img-box:hover h3 {
+    opacity: 1;
+    bottom: 25px;
+}
+
+.text{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 65%;
+    display: block;
+}
+.class-row{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.class-row h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.class-row:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+.class-row i{
+    height: 100px;
+    float: left;
+    shape-outside: margin-box;
+    margin: 0 30px;
+}
+
+.class-row i{
+    margin-top: 3%;
+    font-size: 80px;
+    width: 100px;
+}

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+
+section{
+    width: 100%;
+    height: 330vh;
+    background: #f5faff;
+}
+
+section .section-top{
+    background: #e0f0ff;
+    background-image: linear-gradient(rgba(85, 85, 206, 0.632),rgba(0,0,50,0.8)),url(/img/imgbox/three.jpg);
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),  -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    position: relative;
+    border-bottom-left-radius: 100px ;
+}
+
+.title{
+    display: block;
+    padding-top: 8%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 65px;
+    color: white;
+    font-family: 'Russo One', sans-serif;
+
+}
+
+.description{
+    position: absolute;
+    color: white;
+    top: 44%;
+    left: 25%;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+
+.animate__animated.animate__fadeInUp {
+    --animate-duration: 2s;
+  }
+
+
+/*accordian--------------------------------------------------------*/
+
+.accordian{
+    margin: auto;
+    display: flexbox;
+    padding-top: 70px;
+    width: 85vw;
+    height: 100vh;
+    z-index: 100;
+}
+
+.accordian li{
+    flex-basis: 31%;
+    box-sizing: border-box;
+    list-style: none;
+    width: 100%;
+    margin: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: #fff3f3;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),  -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.accordian li label{
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+.accordian li label h3{
+    display: block;
+}
+
+.accordian li label img, .accordian li label i{
+    font-size: 100px;
+    margin-top: 2%;
+    padding-right: 2%;
+    width: 180px;
+    margin-left: 3%;
+    float: left;
+}
+
+
+/*label::before{
+    content: '+';
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}*/
+
+input[type="radio"]{
+    display: none;
+}
+
+.accordian .content{
+    color: #555;
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+/*.accordian input[type="radio"]:checked + label::before{
+    content: '-';
+}*/
+
+.accordian input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 10px 10px 20px;
+}
+
+@media (max-width: 700px){
+    .title{
+        font-size: 55px;
+        padding-left: 3%;
+    }
+    .description{
+        top: 60%;
+    }
+}
